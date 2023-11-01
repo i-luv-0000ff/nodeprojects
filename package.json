@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "json-table-converter": "^0.3.0",
+    "mariadb": "^3.2.2",
+    "mssql": "^10.0.1"
+  }
+}
