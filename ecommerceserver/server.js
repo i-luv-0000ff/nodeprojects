@@ -1,10 +1,12 @@
 const express = require('express');
 const cors = require('cors');
+
 const app = express();
 app.use(express.json());
 const port = 3000;
 require('./routes/product.route')(app);
 require('./routes/cart.route')(app);
+require('./routes/auth.route')(app);
 app.use(cors());
 const db = require('./model');
 db.mongoose.connect(db.url, {

@@ -29,3 +29,11 @@ exports.create = (req, res) => {
             });
         });
 }
+exports.update = (req, res) => {
+    console.log(req.query);
+    const id = req.query.id;
+    products.findByIdAndUpdate(id, req.body)
+        .then(product => {
+            res.send(product);
+        })
+}
